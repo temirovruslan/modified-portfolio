@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		@apply bg-[#eff6ff]  font-normal text-base;
+	}
+}
+
+@layer components {
+	.wrapper {
+		@apply w-[1200px]  mx-auto my-0 px-4;
+	}
+
+	/*universal*/
+
+	.center {
+		@apply flex items-center justify-center;
+	}
+
+	.slide-in {
+		@apply fixed top-0 bottom-0 w-full h-screen bg-[#dbbebe] origin-bottom;
+	}
+	.slide-out {
+		@apply fixed top-0 bottom-0 w-full h-screen bg-[#0d3434] origin-top;
+	}
+}
