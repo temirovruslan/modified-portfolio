@@ -55,7 +55,11 @@ function Home() {
 				onMouseOver={handleHover}
 				onMouseLeave={handleMouseLeave}
 			>
-				<img src="/src/assets/circle.webp" alt="circle" />
+				<img
+					src="https://i.postimg.cc/vmCTj0V3/circle.webp"
+					alt="circle"
+				/>
+
 				<div className="z-50 absolute">
 					<MoveRight
 						size={48}
@@ -67,7 +71,7 @@ function Home() {
 				</div>
 				<img
 					className="animate-spin-slow absolute"
-					src="/src/assets/rounded-text.png"
+					src="https://i.postimg.cc/4yyJxtVm/rounded-text.png"
 					alt="circle"
 				/>
 			</button>
