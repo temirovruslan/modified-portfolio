@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-export function useTypingEffect(textToType, interKeyStrokeDurationInMs) {
+export function useTypingEffect(textToType:any, interKeyStrokeDurationInMs:any) {
   const [currentPosition, setCurrentPosition] = useState(0);
   const currentPositionRef = useRef(0);
 

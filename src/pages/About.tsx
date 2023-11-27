@@ -1,6 +1,6 @@
-import React from "react";
 import Navigation from "../components/Navigation";
-import transition from "../components/Transition";
+import transition from "../components/transition";
+
 
 const About = () => {
 	return (
