@@ -5,7 +5,7 @@ import clsx from "clsx";
 import Navigation from "../components/Navigation";
 
 import ParticlesContainer from "../components/ParticlesContainer";
-import transition from "../components/Transition";
+import transition from "../components/transition";
 
 function Home() {
 	const text = useTypingEffect(
