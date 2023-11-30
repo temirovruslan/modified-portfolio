@@ -4,7 +4,7 @@
 
 @layer base {
 	body {
-		@apply bg-[#eff6ff]  font-normal text-base;
+		@apply bg-[#eff6ff]   font-normal text-base;
 	}
 }
 
@@ -24,5 +24,130 @@
 	}
 	.slide-out {
 		@apply fixed top-0 bottom-0 w-full h-screen bg-[#0d3434] origin-top;
+	}
+	/* ------------card animation------------ */
+
+	.card {
+		@apply relative w-[430px] h-[550px] shadow-[0_15px_35px_rgba(0,0,0,0.25)] overflow-hidden rounded-[20px];
+	}
+	.card .poster {
+		@apply relative overflow-hidden before:content-[""] before:absolute before:bottom-[-180px] before:w-full before:h-full before:z-[1] before:duration-500  before:bg-[100%_100%];
+	}
+	.card .poster::before {
+		background: linear-gradient(0deg, #1064a6 50%, transparent);
+	}
+	.blue::before {
+		background: linear-gradient(0deg, #1064a6, transparent) !important;
+	}
+	.blue::before {
+		background: linear-gradient(0deg, #a61010, transparent) !important;
+	}
+	.white::before {
+		background: linear-gradient(0deg, #b8b1b1, transparent) !important;
+	}
+	.card:hover .poster::before {
+		@apply bottom-0;
+	}
+	.card .poster img {
+		@apply w-full duration-500;
+	}
+
+	.card .details {
+		@apply absolute bottom-[-105px] w-full z-[2] duration-500 p-5 left-0;
+	}
+
+	.card:hover .details {
+		@apply bottom-0;
+	}
+	.card .expanded {
+		@apply absolute bottom-[-80px] w-full z-[2] duration-500 p-5 left-0;
+	}
+	.card:hover .expanded {
+		@apply bottom-[220px];
+	}
+
+	.card .details .logo {
+		@apply max-w-[180px];
+	}
+	.card .details h3 {
+		@apply text-white;
+	}
+	.card .details .rating {
+		@apply relative px-0 py-[5px];
+	}
+	.card .details .tags {
+		@apply relative mt-[5px];
+	}
+	.card .details .tags span {
+		@apply text-white rounded px-[5px] py-0.5;
+		background: rgb(21, 136, 224);
+	}
+	.info {
+		@apply text-white;
+	}
+	.cast {
+		@apply relative;
+	}
+	.cast ul {
+		@apply relative flex;
+	}
+
+	/* btn lunch me with icon rocket */
+	.cssbuttons-io-button {
+		@apply text-[white] text-[17px] font-medium tracking-wider flex items-center shadow-[inset_0_0_1.6em_-0.6em_#714da6] overflow-hidden relative h-[2.4em] cursor-pointer pl-[1.2em] pr-[3.3em] p-[0.35em] rounded-[0.9em] border-[none];
+		font-family: inherit;
+	}
+	.cssbuttons-io-button .icon {
+		@apply absolute flex items-center justify-center h-[1.8em] w-[2.2em]  transition-all duration-[0.3s] ml-[1em] rounded-[0.7em] right-[0.3em];
+		background: white;
+	}
+	.cssbuttons-io-button:hover .icon {
+		@apply w-[calc(100%_-_0.6em)];
+	}
+	.cssbuttons-io-button .icon svg {
+		@apply w-[1.1em] transition-transform duration-[0.3s];
+	}
+	.cssbuttons-io-button:hover .icon svg {
+		@apply translate-x-[0.1em];
+	}
+	.cssbuttons-io-button:active .icon {
+		@apply scale-95;
+	}
+	.swiper-pagination-bullet-active {
+		background-color: red !important;
+	}
+
+	.swiper-pagination-bullet {
+		background-color: rgba(255, 0, 0, 0.5);
+	}
+
+	/* arrow swiper costume */
+	.btn-class-name {
+		@apply w-[50px] h-[40px] cursor-pointer select-none touch-manipulation relative transition-[0.3s] rounded-[100%] border-[none];
+		--primary: 255, 90, 120;
+		--secondary: 150, 50, 60;
+		outline: none;
+		outline: 10px solid rgb(var(--primary), 0.5);
+	}
+	.btn-class-name .back {
+		@apply absolute w-full h-full rounded-[100%] left-0 top-0;
+		background: rgb(var(--secondary));
+	}
+	.btn-class-name .front {
+		@apply shadow-[0_0.5em_1em_-0.2em_rgba(var(--secondary),0.5)] absolute border border-[rgb(var(--secondary))] w-full h-full flex justify-center items-center text-[1.2rem] font-semibold translate-y-[-15%] transition-[0.15s] text-[rgb(var(--secondary))] rounded-[100%] border-solid left-0 top-0;
+		background: linear-gradient(
+			0deg,
+			rgba(var(--primary), 0.6) 20%,
+			rgba(var(--primary)) 50%
+		);
+		font-family: inherit;
+	}
+	.btn-class-name:active .front {
+		@apply translate-y-[0%] shadow-[0_0];
+	}
+
+	.btn-class-name.blue {
+		--primary: 90, 120, 255; /* Blue color */
+		--secondary: 50, 60, 150; /* Darker shade of blue for contrast */
 	}
 }
