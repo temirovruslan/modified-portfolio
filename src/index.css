@@ -37,14 +37,19 @@
 		background: linear-gradient(0deg, #1064a6 50%, transparent);
 	}
 	.blue::before {
-		background: linear-gradient(0deg, #1064a6, transparent) !important;
+		background: linear-gradient(0deg, #04204a, transparent) !important;
 	}
-	.blue::before {
+	/* .blue::before {
 		background: linear-gradient(0deg, #a61010, transparent) !important;
-	}
+	} */
 	.white::before {
 		background: linear-gradient(0deg, #b8b1b1, transparent) !important;
 	}
+
+	.milk::before {
+		background: linear-gradient(0deg, #545424, transparent) !important;
+	}
+
 	.card:hover .poster::before {
 		@apply bottom-0;
 	}
@@ -53,7 +58,7 @@
 	}
 
 	.card .details {
-		@apply absolute bottom-[-105px] w-full z-[2] duration-500 p-5 left-0;
+		@apply absolute bottom-[-105px] w-full z-[2] duration-500 px-5 pt-5 pb-2 left-0;
 	}
 
 	.card:hover .details {
@@ -63,7 +68,7 @@
 		@apply absolute bottom-[-80px] w-full z-[2] duration-500 p-5 left-0;
 	}
 	.card:hover .expanded {
-		@apply bottom-[220px];
+		@apply bottom-[0px];
 	}
 
 	.card .details .logo {
@@ -94,7 +99,7 @@
 
 	/* btn lunch me with icon rocket */
 	.cssbuttons-io-button {
-		@apply text-[white] text-[17px] font-medium tracking-wider flex items-center shadow-[inset_0_0_1.6em_-0.6em_#714da6] overflow-hidden relative h-[2.4em] cursor-pointer pl-[1.2em] pr-[3.3em] p-[0.35em] rounded-[0.9em] border-[none];
+		@apply text-[black] text-[17px] font-medium tracking-wider flex items-center shadow-[inset_0_0_1.6em_-0.6em_#714da6] overflow-hidden relative h-[2.4em] cursor-pointer pl-[1.2em] pr-[3.3em] p-[0.35em] rounded-[0.9em] border-[none];
 		font-family: inherit;
 	}
 	.cssbuttons-io-button .icon {
@@ -149,5 +154,36 @@
 	.btn-class-name.blue {
 		--primary: 90, 120, 255; /* Blue color */
 		--secondary: 50, 60, 150; /* Darker shade of blue for contrast */
+	}
+
+	.swiper-slide swiper-slide-active card {
+		width: 350px !important;
+		/* height: 580px !important; */
+	}
+	.swiper-slide {
+		width: 80px !important;
+	}
+
+	/* read more btn */
+
+	.button {
+		@apply cursor-pointer relative text-base text-white bg-transparent font-semibold transition-all duration-[0.3s] ease-[cubic-bezier(0.23,1,0.320,1)] overflow-hidden px-2 py-1 rounded-[24px] border-2 border-solid border-gray-500 before:content-[''] before:absolute before:w-[40px] before:h-[40px] before:z-[-1] before:bg-gray-500 before:transition-all before:duration-[0.6s] before:ease-[cubic-bezier(0.23,1,0.320,1)] before:m-auto before:rounded-[inherit] before:inset-0 hover:text-[black] hover:shadow-[0_0px_20px_rgba(128,128,128,0.4)]; /* Change the shadow color to match the background color */
+	}
+
+	.yellow {
+		@apply cursor-pointer relative text-base text-white bg-transparent font-semibold transition-all duration-[0.3s] ease-[cubic-bezier(0.23,1,0.320,1)] overflow-hidden px-2 py-1 rounded-[24px] border-2 border-solid border-[#e4ff00] before:content-[''] before:absolute before:w-[40px] before:h-[40px] before:z-[-1] before:bg-[#e4ff00] before:transition-all before:duration-[0.6s] before:ease-[cubic-bezier(0.23,1,0.320,1)] before:m-auto before:rounded-[inherit] before:inset-0 hover:text-[black] hover:shadow-[0_0px_20px_rgba(128,128,128,0.4)] !important; /* Change the shadow color to match the background color */
+	}
+
+	.button::before {
+		scale: 0;
+	}
+	.button:hover::before {
+		scale: 3;
+	}
+	.button:hover {
+		scale: 1.1;
+	}
+	.button:active {
+		scale: 1;
 	}
 }
