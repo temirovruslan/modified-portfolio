@@ -12,8 +12,8 @@ interface Project {
 
 export const projects: Project[] = [
 	{
-		img: "https://i.postimg.cc/sXyp9945/phare.png",
-		link: "https://",
+		img: "https://i.postimg.cc/3JvnwLxZ/30-2.png",
+		link: "https://www.phare-ts.com",
 		className: "milk",
 		title: "Phare Technologies",
 		description:
@@ -24,7 +24,7 @@ export const projects: Project[] = [
 	},
 	{
 		img: "https://i.postimg.cc/Njd67rPn/apple.png",
-		link: "https://",
+		link: "https://apple-clone-gray.vercel.app",
 		className: "white",
 		title: "Apple shop",
 
@@ -37,7 +37,7 @@ export const projects: Project[] = [
 	},
 	{
 		messageToUser: "Platform under development. No link available yet",
-		img: "https://i.postimg.cc/KvMyvjm6/magnus.webp",
+		img: "https://i.postimg.cc/9Fz1GRkf/magnus-Mobile.png",
 		link: "",
 		className: "blue",
 		title: "Magnus Platform",

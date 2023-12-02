@@ -28,7 +28,32 @@
 	/* ------------card animation------------ */
 
 	.card {
-		@apply relative w-[430px] h-[550px] shadow-[0_15px_35px_rgba(0,0,0,0.25)] overflow-hidden rounded-[20px];
+		@apply relative w-[430px] max-h-[550px] shadow-[0_15px_35px_rgba(0,0,0,0.25)] overflow-hidden rounded-[20px];
+	}
+	/* @media (max-width: 1000px) {
+		.mySwiper {
+			@apply w-[400px]  !important;
+		}
+	} */
+	@media (max-width: 650px) {
+		.mySwiper {
+			@apply w-[400px]   !important;
+		}
+	}
+	@media (max-width: 475px) {
+		.mySwiper {
+			@apply w-[400px]  !important;
+		}
+	}
+	@media (max-width: 430px) {
+		.mySwiper {
+			@apply w-[350px]  !important;
+		}
+	}
+	@media (max-width: 380px) {
+		.mySwiper {
+			@apply w-[300px]  !important;
+		}
 	}
 	.card .poster {
 		@apply relative overflow-hidden before:content-[""] before:absolute before:bottom-[-180px] before:w-full before:h-full before:z-[1] before:duration-500  before:bg-[100%_100%];
@@ -126,6 +151,10 @@
 		background-color: rgba(255, 0, 0, 0.5);
 	}
 
+	/* .swiper {
+		width: 500px !important;
+	} */
+
 	/* arrow swiper costume */
 	.btn-class-name {
 		@apply w-[50px] h-[40px] cursor-pointer select-none touch-manipulation relative transition-[0.3s] rounded-[100%] border-[none];
@@ -156,13 +185,13 @@
 		--secondary: 50, 60, 150; /* Darker shade of blue for contrast */
 	}
 
-	.swiper-slide swiper-slide-active card {
+	/* .swiper-slide swiper-slide-active card {
 		width: 350px !important;
 		/* height: 580px !important; */
-	}
-	.swiper-slide {
+
+	/* .swiper-slide {
 		width: 80px !important;
-	}
+	} */
 
 	/* read more btn */
 

@@ -11,7 +11,7 @@ import { Navigation, Mousewheel, Keyboard } from "swiper/modules";
 import { projects } from "../constants";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
-const AnimatedCards = () => {
+const AnimatedCardsMobile = () => {
 	const [expandedCards, setExpandedCards] = useState<boolean[]>([]);
 	const maxChar = 200;
 	const toggleReadMore = (index: number) => {
@@ -31,17 +31,7 @@ const AnimatedCards = () => {
 		<Swiper
 			slidesPerView={1}
 			loop={true}
-			spaceBetween={30}
-			breakpoints={{
-				0: {
-					// width: 576,
-					slidesPerView: 1,
-				},
-				1200: {
-					// width: 768,
-					slidesPerView: 2,
-				},
-			}}
+			spaceBetween={5}
 			navigation={{
 				prevEl: navigationPrevRef.current,
 				nextEl: navigationNextRef.current,
@@ -54,13 +44,17 @@ const AnimatedCards = () => {
 			mousewheel={true}
 			keyboard={true}
 			modules={[Navigation, Mousewheel, Keyboard]}
-			className="mySwiper w-[1000px]"
+			className="mySwiper w-[500px] "
 		>
 			{projects.map((project, index) => {
 				const isExpanded = expandedCards[index] || false;
 
 				return (
-					<SwiperSlide key={index} className="card">
+					<SwiperSlide
+						// style={{ width: "350px" }}
+						key={index}
+						className="card"
+					>
 						<div className={`poster ${project.className}`}>
 							<img src={project.img} alt="dsda" />
 						</div>
@@ -147,7 +141,7 @@ const AnimatedCards = () => {
 				);
 			})}
 
-			<div className="center mt-10 pb-4">
+			<div className="center mt-10 pb-4 sm:pb-0 sm:mt-2">
 				<button
 					ref={navigationPrevRef}
 					className="z-50 mr-3 text-[grey] bg-[white] w-12 h-7 rounded-md  duration-300 center hover:text-[black] "
@@ -165,4 +159,4 @@ const AnimatedCards = () => {
 	);
 };
 
-export default AnimatedCards;
+export default AnimatedCardsMobile;

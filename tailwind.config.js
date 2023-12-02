@@ -15,7 +15,7 @@ module.exports = {
 			},
 		},
 		screens: {
-			sm: "640px",
+			sm: "300px",
 			md: "768px",
 			lg: "960px",
 			xl: "1200px",
@@ -36,8 +36,8 @@ module.exports = {
 				"spin-slow": "spin 6s linear infinite",
 			},
 			fontFamily: {
-        serif: ['Work+Sans', 'serif'],
-        // robotoMono: ['Roboto+Mono', 'robotoMono'],
+				serif: ["Work+Sans", "serif"],
+				// robotoMono: ['Roboto+Mono', 'robotoMono'],
 			},
 		},
 	},
