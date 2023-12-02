@@ -60,7 +60,7 @@ const AnimatedCardsMobile = () => {
 						</div>
 						<div className={isExpanded ? "expanded" : "details"}>
 							{project.messageToUser && (
-								<p className="text-[#1a1b36] italic text-base font-bold">
+								<p className="text-[#1a1b36] italic text-base sm:text-sm font-bold">
 									{project.messageToUser}
 								</p>
 							)}
@@ -72,7 +72,7 @@ const AnimatedCardsMobile = () => {
 											fontFamily: "Ubuntu",
 											fontWeight: 500,
 										}}
-										className={`cssbuttons-io-button mb-2 bg-[${project.btnColor}]`}
+										className={`cssbuttons-io-button sm:text-sm mb-2 bg-[${project.btnColor}]`}
 									>
 										Visit
 										<div className="icon">
@@ -108,7 +108,7 @@ const AnimatedCardsMobile = () => {
 							</h3>
 
 							{!isExpanded ? (
-								<div className="info text-lg">
+								<div className="info text-lg sm:text-sm">
 									{project.description.length > maxChar ? (
 										<p>
 											{truncatedText(project.description)}
@@ -119,7 +119,7 @@ const AnimatedCardsMobile = () => {
 									)}
 								</div>
 							) : (
-								<div className="info text-lg">
+								<div className="info text-lg sm:text-sm">
 									<p>{project.description}</p>
 								</div>
 							)}
@@ -134,7 +134,9 @@ const AnimatedCardsMobile = () => {
 								)}
 
 							<div className="cast">
-								<ul className="text-base">{project.tags}</ul>
+								<ul className="text-base sm:text-sm">
+									{project.tags}
+								</ul>
 							</div>
 						</div>
 					</SwiperSlide>
