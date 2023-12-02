@@ -94,7 +94,7 @@
 	}
 	@media (max-width: 475px) {
 		.card .expanded {
-			@apply absolute bottom-[-80px] w-full z-[2] duration-500 px-1 py-2 left-0;
+			@apply absolute bottom-[-80px] w-full z-[2] duration-500 px-2 py-2 left-0;
 		}
 	}
 	.card:hover .expanded {
